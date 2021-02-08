@@ -20,17 +20,18 @@ exports.config = {
         },
     multiCapabilities: [
         {
-            'browserName': 'firefox',
-            // 'chromeOptions': {
-			// 	'args': ['disable-infobars'] // pour masquer le message "Chrome est controlé par un logiciel de test automatisé"
-            // }
+            // 'browserName': 'firefox',
+            'browserName': 'chrome',
+            'chromeOptions': {
+                'args': ['--headless', "--window-size=1920,1080", 'disable-infobars'] // pour masquer le message "Chrome est controlé par un logiciel de test automatisé"
+            }
         },
 
     ],
     suites: {
-        acceptance : [
-			'test/e2e/Acceptance/Wikipedia/searchWord.Spec.js',
-			//'test/e2e/Acceptance/ImpotsGouv/gouv.Spec.js'
+        acceptance: [
+            // 'test/e2e/Acceptance/Wikipedia/searchWord.Spec.js',
+            'test/e2e/Acceptance/ImpotsGouv/gouv.Spec.js'
         ]
     },
     mochaOpts: {
