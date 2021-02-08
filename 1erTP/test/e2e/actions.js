@@ -6,7 +6,7 @@ const until = protractor.ExpectedConditions;
 
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
-const logReport = require('mochawesome-screenshots/logReport');
+const logReport = require('../../1erTP/test/e2e/node_modules/mochawesome-screenshots/logReport');
 
 chai.use(chaiAsPromised);
 const expect = chai.expect;
